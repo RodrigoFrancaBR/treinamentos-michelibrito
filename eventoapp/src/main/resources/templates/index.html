@@ -4,7 +4,7 @@
 
 <head>
 
-<title>EventosApp</title>
+<title>EventsApp</title>
 
 <!--Import Google Icon Font-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -21,30 +21,29 @@
 
 <body>
 
-	<h1>Lista de Eventos</h1>
+	<h1>List of Events</h1>
 
 	<h3>
-	    <a href="/cadastrarEvento" class="waves-effect waves-light btn"><i class="material-icons left">add_circle</i>Cadastrar Evento</a>
-		<!-- <a href="/cadastrarEvento">Cadastrar Evento</a> -->
+	    <a href="/registerEvent" class="waves-effect waves-light btn"><i class="material-icons left">add_circle</i>Register Events</a>		
 	</h3>
 	
 	<table class="container">
 		<thead>
 			<tr>
-				<th>Nome</th>
+				<th>Name</th>
 				<th>Local</th>
-				<th>Data</th>
-				<th>Horario</th>
-				<th>Deletar</th>
+				<th>Date</th>
+				<th>Time</th>
+				<th>Delete</th>
 			</tr>
 		</thead>
 		
 		<tbody>
-			<tr th:each="evento : ${eventos}">
-				<td><span th:text="${evento.nome}"></span></td>				
-				<td><span th:text="${evento.local}"></span></td>
-				<td><span th:text="${evento.data}"></span></td>
-				<td><span th:text="${evento.horario}"></span></td>				
+			<tr th:each="event : ${events}">
+				<td> <a th:href="${(#mvc.url('EC#eventDetails').arg(0, event.code)).build()}"> <span th:text="${event.name}"></span></a></td>				
+				<td><span th:text="${event.local}"></span></td>
+				<td><span th:text="${event.date}"></span></td>
+				<td><span th:text="${event.time}"></span></td>				
 			</tr>
 		</tbody>
 		</table>

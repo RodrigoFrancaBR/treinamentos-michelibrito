@@ -3,7 +3,7 @@
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 
-<title>EventosApp</title>
+<title>EventsApp</title>
 
 <!--Import Google Icon Font-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -20,14 +20,14 @@
 
 <body>
       
-      <h1>Cadastro de Eventos:</h1>
+      <h1>Register Events:</h1>
       
-      <h3> <a href="/eventos" class="waves-effect waves-light btn">
-      		<i class="material-icons left">format_list_bulleted</i>Lista de Eventos</a></h3>
+      <h3> <a href="/events" class="waves-effect waves-light btn">
+      		<i class="material-icons left">format_list_bulleted</i>List of Events</a></h3>
       
 	<form class="container" method="post">
 		
-		Nome: <input type="text" value="" name="nome" />
+		Name: <input type="text" value="" name="name" />
 		 
 		<div class="row">
 			
@@ -35,13 +35,13 @@
 				Local: <input type="text" value="" name="local"/></div>
 			
 			<div class="input-field col s3">
-				Data: <input type="date" value="" name="data"/></div>
+				Date: <input type="date" value="" name="date"/></div>
 			
 			<div class="input-field col s3">
-				Horario: <input type="time" value="" name="horario"/></div>
+				Time: <input type="time" value="" name="time"/></div>
 		</div>
 		
-		<button class="waves-effect waves-light btn" type="submit">Salvar</button>
+		<button class="waves-effect waves-light btn" type="submit">Save</button>
 		
 	</form>	
 </body>
