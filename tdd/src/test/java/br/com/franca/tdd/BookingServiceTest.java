@@ -18,10 +18,10 @@ import br.com.franca.tdd.model.BookingModel;
 import br.com.franca.tdd.service.BookingService;
 import br.com.franca.tdd.service.repository.BookingRepository;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) // ??
 public class BookingServiceTest {
 
-	@TestConfiguration
+	@TestConfiguration // não sugerir no auto import em classes que não são de teste 
 	static class BookingServiceTestConfiguration {
 
 		@Bean
@@ -40,7 +40,6 @@ public class BookingServiceTest {
 	public void bookingServiceTestDaysCalculator() {
 		String name = "Rodrigo";
 		int days = bookingService.daysCalculatorWithDatabase(name);
-
 		Assertions.assertEquals(days, 10);
 	}
 
